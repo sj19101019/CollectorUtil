@@ -1,0 +1,14 @@
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/AvstractDataStream.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorImpl/MultiMapCollectorsImpl.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorImpl/DataStream.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/CollectorsUtil.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/SameTypeCollectors.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorImpl/CollectorFunctionConditionsImpl.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/DiffTypeCollectoers.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/CollectorFunctionConditions.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/CollectorPredicateConditions.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorImpl/SameTypeCollectorsImpl.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/StreamFunciton.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorImpl/DiffTypeCollectorsImpl.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorImpl/CollectorPredicateConditionsImpl.java
+/Users/OCBA/eclipse-workspace/collector_util/src/main/java/com/ocba/collector_util/collectorInterface/MultiMapCollectors.java
