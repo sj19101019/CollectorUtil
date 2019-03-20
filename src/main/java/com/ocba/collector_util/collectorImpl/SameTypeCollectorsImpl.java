@@ -96,7 +96,7 @@ public class SameTypeCollectorsImpl<T> {
 		 * 取得搜尋結果陣列
 		 */
 		@Override
-		public List<T> filterSameVauleToList() {
+		public List<T> filterSameValueToList() {
 			if (this.predicate == null || this.datas == null) {
 				return new ArrayList<>();
 			}
@@ -109,7 +109,7 @@ public class SameTypeCollectorsImpl<T> {
 		 * 取得搜尋結果Set
 		 */
 		@Override
-		public Set<T> filterSameVauleToSet() {
+		public Set<T> filterSameValueToSet() {
 			if (this.predicate == null || this.datas == null) {
 				return new HashSet<>();
 			}
@@ -122,7 +122,7 @@ public class SameTypeCollectorsImpl<T> {
 		 * 取得搜索結果物件
 		 */
 		@Override
-		public T filterSameVauleToObjectByFirstMatch() {
+		public T filterSameValueToObjectByFirstMatch() {
 			if (this.predicate == null || this.datas == null) {
 				return null;
 			}

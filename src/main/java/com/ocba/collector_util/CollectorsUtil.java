@@ -110,9 +110,9 @@ public class CollectorsUtil {
 	 *            欲判斷陣列
 	 * @return List<F> 取出符合條件所有的值
 	 */
-	public static <F> List<F> filterSameVauleToList(Predicate<F> predicate, List<F> datas) {
+	public static <F> List<F> filterSameValueToList(Predicate<F> predicate, List<F> datas) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl()).setCondition(predicate, datas)
-				.filterSameVauleToList();
+				.filterSameValueToList();
 	}
 
 	/**
@@ -126,9 +126,9 @@ public class CollectorsUtil {
 	 *            欲取出此欄位與此值相同的物件
 	 * @return List<F> 回傳符合條件的第一筆物件
 	 */
-	public static <F> List<F> filterSameVauleToList(String fieldName, List<F> datas, Object value) {
+	public static <F> List<F> filterSameValueToList(String fieldName, List<F> datas, Object value) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl())
-				.setCondition(fieldName, value, datas).filterSameVauleToList();
+				.setCondition(fieldName, value, datas).filterSameValueToList();
 	}
 
 	/**
@@ -140,9 +140,9 @@ public class CollectorsUtil {
 	 *            欲搜查陣列
 	 * @return <F> 回傳符合條件的第一筆物件
 	 */
-	public static <F> F filterSameVauleToObjectByFirstMatch(Predicate<F> predicate, List<F> datas) {
+	public static <F> F filterSameValueToObjectByFirstMatch(Predicate<F> predicate, List<F> datas) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl()).setCondition(predicate, datas)
-				.filterSameVauleToObjectByFirstMatch();
+				.filterSameValueToObjectByFirstMatch();
 	}
 
 	/**
@@ -156,9 +156,9 @@ public class CollectorsUtil {
 	 *            欲取出值的陣列
 	 * @return <F> 回傳與欄位相同值的物件
 	 */
-	public static <F> F filterSameVauleToObjectByFirstMatch(String fieldName, List<F> datas, Object value) {
+	public static <F> F filterSameValueToObjectByFirstMatch(String fieldName, List<F> datas, Object value) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl())
-				.setCondition(fieldName, value, datas).filterSameVauleToObjectByFirstMatch();
+				.setCondition(fieldName, value, datas).filterSameValueToObjectByFirstMatch();
 	}
 
 	/**
@@ -172,9 +172,9 @@ public class CollectorsUtil {
 	 *            欲取出值的陣列
 	 * @return List<F> 取得此欄位中與Set相同值的物件回傳陣列
 	 */
-	public static <F, T> List<F> filterSameVauleToList(String fieldName, List<F> datas, Set<T> value) {
+	public static <F, T> List<F> filterSameValueToList(String fieldName, List<F> datas, Set<T> value) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl())
-				.setCondition(fieldName, value, datas).filterSameVauleToList();
+				.setCondition(fieldName, value, datas).filterSameValueToList();
 	}
 
 	/**
@@ -265,9 +265,9 @@ public class CollectorsUtil {
 	 *            欲取出值的陣列
 	 * @return Set<F> 回傳與欄位相同值的陣列
 	 */
-	public static <F> Set<F> filterSameVauleToSet(String fieldName, List<F> datas, Object value) {
+	public static <F> Set<F> filterSameValueToSet(String fieldName, List<F> datas, Object value) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl())
-				.setCondition(fieldName, value, datas).filterSameVauleToSet();
+				.setCondition(fieldName, value, datas).filterSameValueToSet();
 	}
 
 	/**
@@ -281,9 +281,9 @@ public class CollectorsUtil {
 	 *            欲取出值的陣列
 	 * @return Set<F> 取得此欄位中與Set相同值的物件回傳陣列
 	 */
-	public static <F, T> Set<F> filterSameVauleToSet(String fieldName, List<F> datas, Set<T> value) {
+	public static <F, T> Set<F> filterSameValueToSet(String fieldName, List<F> datas, Set<T> value) {
 		return new SameTypeCollectorsImpl<F>(new CollectorPredicateConditionsImpl())
-				.setCondition(fieldName, value, datas).filterSameVauleToSet();
+				.setCondition(fieldName, value, datas).filterSameValueToSet();
 	}
 
 	/**
@@ -295,7 +295,7 @@ public class CollectorsUtil {
 	 *            欲轉成Map的Iterable
 	 * @return Map<T, List<F>> 回傳以此欄位為Key的Map
 	 */
-	public static <F, T> Map<T, List<F>> filterSameVauleToMap(String fieldName, Iterable<F> datas) {
+	public static <F, T> Map<T, List<F>> filterSameValueToMap(String fieldName, Iterable<F> datas) {
 		return new DiffTypeCollectorsImpl<F, T>(new CollectorFunctionConditionsImpl()).setCondition(fieldName, datas)
 				.keyToValuesMultimap();
 	}
@@ -309,7 +309,7 @@ public class CollectorsUtil {
 	 *            欲轉成Map的Iterable
 	 * @return Map<T, List<F>> 回傳以此條件為Key的Map
 	 */
-	public static <F, T> Map<T, List<F>> filterSameVauleToMap(Function<F, T> keyFunction, Iterable<F> datas) {
+	public static <F, T> Map<T, List<F>> filterSameValueToMap(Function<F, T> keyFunction, Iterable<F> datas) {
 		return new DiffTypeCollectorsImpl<F, T>(new CollectorFunctionConditionsImpl()).setCondition(keyFunction, datas)
 				.keyToValuesMultimap();
 	}
@@ -575,9 +575,9 @@ public class CollectorsUtil {
 	 */
 	public static <R, C, V> Table<R, C, List<V>> filterListToTable(String rowName, String columName, List<V> datas) {
 		Table<R, C, List<V>> table = HashBasedTable.create();
-		Map<C, List<V>> map = filterSameVauleToMap(columName, datas);
+		Map<C, List<V>> map = filterSameValueToMap(columName, datas);
 		for (Entry<C, List<V>> entry1 : map.entrySet()) {
-			Map<R, List<V>> map2 = filterSameVauleToMap(rowName, entry1.getValue());
+			Map<R, List<V>> map2 = filterSameValueToMap(rowName, entry1.getValue());
 			for (Entry<R, List<V>> entry2 : map2.entrySet()) {
 				table.put(entry2.getKey(), entry1.getKey(), entry2.getValue());
 			}
@@ -599,9 +599,9 @@ public class CollectorsUtil {
 	public static <R, C, V> Table<R, C, List<V>> filterListToTable(Function<V, R> rowFunciton,
 			Function<V, C> columFunciton, List<V> datas) {
 		Table<R, C, List<V>> table = HashBasedTable.create();
-		Map<C, List<V>> map = filterSameVauleToMap(columFunciton, datas);
+		Map<C, List<V>> map = filterSameValueToMap(columFunciton, datas);
 		for (Entry<C, List<V>> entry1 : map.entrySet()) {
-			Map<R, List<V>> map2 = filterSameVauleToMap(rowFunciton, entry1.getValue());
+			Map<R, List<V>> map2 = filterSameValueToMap(rowFunciton, entry1.getValue());
 			for (Entry<R, List<V>> entry2 : map2.entrySet()) {
 				table.put(entry2.getKey(), entry1.getKey(), entry2.getValue());
 			}

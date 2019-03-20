@@ -5,9 +5,9 @@ import java.util.Set;
 
 public interface SameTypeCollectors<T> {
 
-	public List<T> filterSameVauleToList();
+	public List<T> filterSameValueToList();
 
-	public Set<T> filterSameVauleToSet();
+	public Set<T> filterSameValueToSet();
 
-	public T filterSameVauleToObjectByFirstMatch();
+	public T filterSameValueToObjectByFirstMatch();
 }
